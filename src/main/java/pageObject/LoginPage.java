@@ -5,11 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import abstructComponents.AbstructComponents;
+
+public class LoginPage extends AbstructComponents{
 
 	WebDriver driver;
 	public LoginPage(WebDriver driver){
 		
+		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -23,10 +26,20 @@ public class LoginPage {
 	@FindBy(css=".oxd-button")
 	WebElement loginBtn;
 	
+	@FindBy(xpath="//div[@class='orangehrm-login-error']/child::div/child::div/child::p")
+	WebElement errorMsg;
 	
-	public void applicationLogin(String username, String pwd) {
+	
+	public HomePage applicationLogin(String username, String pwd) {
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(pwd);
 		loginBtn.click();
+		return new HomePage(driver);
+	}
+	
+	public String errorMessage() {
+		waitforwebelementTOappear(errorMsg);
+		String msg = errorMsg.getText();
+		return msg;
 	}
 }

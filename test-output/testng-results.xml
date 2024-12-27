@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-27T04:58:54 CST" name="Default suite" finished-at="2024-12-27T04:59:35 CST" duration-ms="40668">
+    <groups>
+    </groups>
+    <test started-at="2024-12-27T04:58:54 CST" name="Default test" finished-at="2024-12-27T04:59:35 CST" duration-ms="40668">
+      <class name="tests.RecruitmentAddSearchandDeleteVacancy">
+        <test-method is-config="true" signature="navigateToApplication()[pri:0, instance:tests.RecruitmentAddSearchandDeleteVacancy@76494737]" started-at="2024-12-27T04:58:54 CST" name="navigateToApplication" finished-at="2024-12-27T04:59:21 CST" duration-ms="26895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToApplication -->
+        <test-method signature="addVacancyData(java.util.HashMap)[pri:0, instance:tests.RecruitmentAddSearchandDeleteVacancy@76494737]" started-at="2024-12-27T04:59:22 CST" name="addVacancyData" data-provider="getData" finished-at="2024-12-27T04:59:32 CST" duration-ms="10943" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{number=8800990044, firstname=Sudarshan, email=ss@gamil.com, lastname=S}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVacancyData -->
+        <test-method signature="searchVacancyData()[pri:0, instance:tests.RecruitmentAddSearchandDeleteVacancy@76494737]" started-at="2024-12-27T04:59:32 CST" name="searchVacancyData" finished-at="2024-12-27T04:59:34 CST" depends-on-methods="tests.RecruitmentAddSearchandDeleteVacancy.addVacancyData" duration-ms="1364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchVacancyData -->
+        <test-method signature="deleteAddedVacancy()[pri:0, instance:tests.RecruitmentAddSearchandDeleteVacancy@76494737]" started-at="2024-12-27T04:59:34 CST" name="deleteAddedVacancy" finished-at="2024-12-27T04:59:35 CST" depends-on-methods="tests.RecruitmentAddSearchandDeleteVacancy.searchVacancyData" duration-ms="1127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAddedVacancy -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.RecruitmentAddSearchandDeleteVacancy@76494737]" started-at="2024-12-27T04:59:35 CST" name="closeBrowser" finished-at="2024-12-27T04:59:35 CST" duration-ms="178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.RecruitmentAddSearchandDeleteVacancy -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
